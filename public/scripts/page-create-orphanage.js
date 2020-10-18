@@ -9,7 +9,7 @@ L.tileLayer(
 
 // create icon
 const icon = L.icon({
-    iconUrl: "./public/images/map-marker.svg",
+    iconUrl: "/images/map-marker.svg",
     iconSize: [58, 68],
     iconAnchor: [29, 68],
 })
@@ -80,4 +80,14 @@ function toggleSelect(event) {
     input.value = button.dataset.value
 }
 
+function validate(event) {
+
+    const needsLatAndLng = false;
+
+    if(needsLatAndLng) {
+        event.preventDefault()
+        alert('Selecione um ponto no mapa!')
+    }
+    
+}
 
